@@ -1,0 +1,6 @@
+<svg width="120" height="120" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" rx="20" fill="#111"></rect>
+  <circle cx="100" cy="100" r="65" stroke="#FFD700" stroke-width="6" fill="none"></circle>
+  <path d="M60 100 L100 60 L140 100 L100 140 Z" fill="#FFD700" stroke="#000" stroke-width="2"></path>
+  <text x="50%" y="180" text-anchor="middle" font-size="24" fill="#FFD700" font-family="monospace" font-weight="bold">FHEGuess</text>
+</svg>

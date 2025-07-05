@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+body {
+  background-color: #000;
+  color: #fdd835;
+  font-family: 'Orbitron', monospace;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ana kutu */
+.terminal-box {
+  background-color: #1c1c1c;
+  padding: 1.5rem;
+  border-radius: 8px;
+  max-width: 700px;
+  margin: 40px auto;
+  color: #f2c94c;
+  border: 2px solid transparent;
+  box-shadow: 0 0 12px #f2c94c;
+  animation: glowing-border 2s linear infinite;
+  text-align: left;
+  font-family: 'Courier New', monospace;
+  position: relative;
+}
+
+/* Parlak kenarlýk animasyonu */
+@keyframes glowing-border {
+  0% {
+    box-shadow: 0 0 10px #f2c94c, 0 0 20px #f2c94c inset;
+  }
+  50% {
+    box-shadow: 0 0 20px #ffd700, 0 0 30px #ffd700 inset;
+  }
+  100% {
+    box-shadow: 0 0 10px #f2c94c, 0 0 20px #f2c94c inset;
+  }
+}
+
+/* Logo */
+.logo {
+  display: block;
+  max-width: 160px;
+  margin: 0 auto 15px;
+}
+
+/* Baþlýk */
+.title {
+  font-size: 1.7em;
+  color: #fdd835;
+  text-shadow: 0 0 8px #fdd835;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Blockchain Info - LIVE MODE */
+.blockchain-info {
+  background-color: rgba(0, 255, 65, 0.2);
+  border: 2px solid #00ff41;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 15px 0;
+  text-align: center;
+  animation: blockchain-pulse 3s infinite;
+}
+
+@keyframes blockchain-pulse {
+  0%, 100% { 
+    opacity: 1; 
+    box-shadow: 0 0 8px #00ff41aa;
+  }
+  50% { 
+    opacity: 0.9; 
+    box-shadow: 0 0 16px #00ff41, 0 0 24px #00ff4150;
+  }
+}
+
+.blockchain-info p {
+  margin: 5px 0;
+  color: #00ff41;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Zaman Bilgisi Kutusu */
+.time-info {
+  background-color: rgba(255, 215, 0, 0.1);
+  border: 1px solid #fdd835;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 15px 0;
+}
+
+.time-info p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+}
+
+.highlight {
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: 0 0 4px #ffd700;
+}
+
+.odd-hour {
+  color: #00ff41;
+  font-weight: bold;
+  text-shadow: 0 0 4px #00ff41;
+  animation: glow-green 2s infinite;
+}
+
+.even-hour {
+  color: #ff4757;
+  font-weight: bold;
+  text-shadow: 0 0 4px #ff4757;
+  animation: glow-red 2s infinite;
+}
+
+@keyframes glow-green {
+  0%, 100% { text-shadow: 0 0 4px #00ff41; }
+  50% { text-shadow: 0 0 8px #00ff41, 0 0 12px #00ff41; }
+}
+
+@keyframes glow-red {
+  0%, 100% { text-shadow: 0 0 4px #ff4757; }
+  50% { text-shadow: 0 0 8px #ff4757, 0 0 12px #ff4757; }
+}
+
+/* Round Bilgisi Kutusu */
+.round-info {
+  background-color: rgba(0, 255, 65, 0.1);
+  border: 1px solid #00ff41;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 15px 0;
+}
+
+.round-info p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+}
+
+/* Mesaj Kutusu */
+.message-box {
+  background-color: rgba(255, 71, 87, 0.2);
+  border: 1px solid #ff4757;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 15px 0;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+.message-box p {
+  margin: 0;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Terminal metin */
+.terminal-text {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.terminal-text p {
+  padding: 0.6rem 1rem;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  border-left: 3px solid #fdd83555;
+}
+
+.terminal-text p:nth-of-type(odd) {
+  background-color: rgba(255, 215, 0, 0.08);
+}
+
+.terminal-text p:nth-of-type(even) {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+/* Giriþ kutusu */
+.input-box {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid #fdd835;
+  background-color: #000;
+  color: #fdd835;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: 'Orbitron', monospace;
+}
+
+.input-box:focus {
+  outline: none;
+  box-shadow: 0 0 10px #fdd835;
+  border-color: #ffd700;
+}
+
+.input-box:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.input-box::placeholder {
+  color: #fdd83580;
+}
+
+/* Buton kutusu */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Temel buton stilleri */
+.button,
+.wallet-button {
+  background-color: #fdd835;
+  color: #000;
+  padding: 12px 24px;
+  border: none;
+  font-weight: bold;
+  font-family: 'Orbitron', monospace;
+  cursor: pointer;
+  font-size: 0.95rem;
+  border-radius: 4px;
+  box-shadow: 0 0 6px #fdd835aa;
+  transition: all 0.3s ease;
+  min-width: 140px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.button:hover,
+.wallet-button:hover {
+  background-color: #ffe55e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px #fdd835aa;
+}
+
+.button:disabled,
+.wallet-button:disabled {
+  background-color: #666;
+  color: #999;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Connected wallet butonu */
+.wallet-button.connected {
+  background-color: #00ff41;
+  color: #000;
+  box-shadow: 0 0 6px #00ff41aa;
+}
+
+/* Özel buton stilleri */
+.button.guess-button {
+  background-color: #fdd835;
+  color: #000;
+  animation: button-ready 2s infinite;
+}
+
+@keyframes button-ready {
+  0%, 100% { box-shadow: 0 0 6px #fdd835aa; }
+  50% { box-shadow: 0 0 12px #fdd835, 0 0 18px #fdd83550; }
+}
+
+.button.start-round {
+  background-color: #00ff41;
+  color: #000;
+  box-shadow: 0 0 6px #00ff41aa;
+}
+
+.button.start-round:hover {
+  background-color: #33ff66;
+  box-shadow: 0 4px 12px #00ff41aa;
+}
+
+.button.reveal-result {
+  background-color: #ff4757;
+  color: #fff;
+  box-shadow: 0 0 6px #ff4757aa;
+}
+
+.button.reveal-result:hover {
+  background-color: #ff6b7a;
+  box-shadow: 0 4px 12px #ff4757aa;
+}
+
+/* Loading animasyonu */
+.loading {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Footer */
+.footer {
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  border-top: 1px solid #fdd83550;
+  color: #00ff41;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .terminal-box {
+    margin: 20px 10px;
+    padding: 1rem;
+  }
+  
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .button,
+  .wallet-button {
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  .time-info,
+  .round-info,
+  .message-box,
+  .blockchain-info {
+    font-size: 0.9rem;
+  }
+  
+  .title {
+    font-size: 1.5em;
+  }
+  
+  .terminal-text p {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.8rem;
+  }
+}
+
+/* Özel hover efektleri */
+.terminal-box:hover {
+  animation-duration: 1s;
+}
+
+/* Gece modu renk ayarlarý */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #000;
+  }
+}
+
+/* Eriþilebilirlik */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
